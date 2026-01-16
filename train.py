@@ -12,8 +12,7 @@ os.makedirs("output/results", exist_ok=True)
 
 # Load dataset
 df = pd.read_csv("data/wine_quality.csv")
-print(df.head())
-X = df.drop("quality", axis=1)
+X = df.drop(["quality","Unnamed: 0"], axis=1)
 y = df["quality"]
 
 # Preprocessing
